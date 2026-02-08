@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша история</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Manrope:wght@300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LottieFiles CDN for animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+    <!-- Decorative background -->
+    <div class="particles-container"></div>
+
+    <main class="content">
+
+        <!-- ===== Hero Section ===== -->
+        <header class="hero">
+            <div class="hero__text">
+                <h1 class="hero__title animate-on-load">Наш путь.</h1>
+                <p class="hero__subtitle animate-on-load">
+                    История, которая начинается с одного момента  
+                    и продолжается каждый день.
+                </p>
+            </div>
+            
+            <!-- New Lottie Heart Animation and Message -->
+            <div class="hero-animation animate-on-load">
+                <lottie-player id="lottie-heart" src="animations/love.json" background="transparent" speed="1"  autoplay></lottie-player>
+                <div id="heart-message" class="heart-message"></div>
+            </div>
+        </header>
+
+        <!-- ===== Relationship Counter Section ===== -->
+        <section class="counter-section">
+            <div class="counter-header animate-on-load">
+                <h2 class="section-title animate-on-scroll">Мы с тобой вместе уже</h2>
+                <div id="audio-trigger" class="audio-trigger">
+                    <lottie-player id="lottie-heart2" src="animations/Flying heart.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                </div>
+            </div>
+            <div class="counter-grid">
+                <div class="counter-card animate-on-scroll">
+                    <span id="months" class="counter-card__number">0</span>
+                    <span class="counter-card__label">месяцев счастья</span>
+                </div>
+                <div class="counter-card animate-on-scroll">
+                    <span id="days" class="counter-card__number">0</span>
+                    <span class="counter-card__label">дней любви</span>
+                </div>
+                <div class="counter-card animate-on-scroll">
+                    <span id="hours" class="counter-card__number">0</span>
+                    <span class="counter-card__label">часов тепла</span>
+                </div>
+                <div class="counter-card animate-on-scroll">
+                    <span id="minutes" class="counter-card__number">0</span>
+                    <span class="counter-card__label">минут улыбок</span>
+                </div>
+                <div class="counter-card animate-on-scroll">
+                    <span id="seconds" class="counter-card__number">0</span>
+                    <span class="counter-card__label">секунд уюта</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Story Text Section ===== -->
+        <section class="text-section">
+            <div class="text-section__paragraph animate-on-scroll">
+                <h2>С самого начала</h2>
+                <p>
+                    С того дня, как наши пути пересеклись,  
+                    мир стал чуть тише и одновременно ярче.  
+                    В нём появилось больше смысла, больше тепла  
+                    и ощущение, что всё на своём месте.
+                </p>
+            </div>
+            <div class="text-section__paragraph animate-on-scroll">
+                <h2>Я обожаю все наши моменты</h2>
+                <p>
+                    Разговоры, прогулки до поздней ночи,  
+                    смех без причины и тишина, в которой всё понятно.  
+                    Маленькие мгновения, которые со временем  
+                    становятся самыми ценными воспоминаниями.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Photo Album Section ===== -->
+        <section class="gallery-section">
+            <h2 class="section-title animate-on-scroll">Наши воспоминания</h2>
+            <div id="photo-gallery" class="gallery"></div>
+        </section>
+
+        <!-- ===== Final Section ===== -->
+        <footer class="final-section animate-on-scroll">
+            <p class="final-section__text">
+                И самое прекрасное — впереди. С тобой.
+            </p>
+            <p class="final-section__icon">♡</p>
+            <!-- Subtle element for audio Easter egg -->
+            
+        </footer>
+
+    </main>
+
+    <!-- ===== Lightbox ===== -->
+    <div id="lightbox" class="lightbox">
+        <span id="lightbox-close" class="lightbox__close">&times;</span>
+        <img id="lightbox-image" class="lightbox__image" src="" alt="Воспоминание">
+    </div>
+
+    <!-- Audio element for Easter egg -->
+    <audio id="easter-egg-audio" src="sound.mp3" preload="auto"></audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
